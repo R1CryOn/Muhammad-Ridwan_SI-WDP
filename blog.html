@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Blog</title>
+	<style type="text/css">
+	body , h1 , h2 , p , td , a, span {
+		font-family: Arial, Helvetica, sans-serif;
+		text-decoration: none;
+	}
+	span {
+		color: blue;
+	}
+	.navbar{
+		background-color: rgb(255, 255, 255);
+		width: 1250px;
+		color: #000;
+		margin: 20px auto;
+		margin-bottom: 0px auto;
+		padding: 10px auto;
+		text-align: right;
+		font-size: smaller;
+	}
+	.rangka {
+		background-color: rgb(211, 211, 211);
+		width: 1250px;
+		color: black;
+		margin: 10px auto;
+		padding: 50px;
+	}
+	.rangka2 {
+		background-color: rgb(241, 241, 241);
+		width: 1250px;
+		color: black;
+		margin: 20px auto;
+		padding: 50px;
+	}
+	.icon {
+		text-align: center;
+		padding: 5px;
+
+	}
+	.tabel{
+		float: left;
+		padding-left: 200px; 
+		
+	}
+	input{
+		width: 1250px;
+	}
+	.kontak{
+		color: white;
+	}
+
+</style>
+</head>
+<body>
+	<div class="navbar" style="font-size: small;">
+		<tr>
+			<td><a href="">Home</a></td>
+			<td><a href="">Product</a></td>
+			<td><a href="">Gallery</a></td>
+			<td><a href="">Blog</a></td>
+			<td><a href="">Inventory</a></td>
+		</tr>
+	</div>
+	<div class="rangka">
+		<table>
+			<tr>
+				<td rowspan="9" width="150px"><img src="Profile.jpg" alt="" width="200px" style="display : block; border-radius: 50%; border-color: white; margin-right:30px ; border: 2px;"></td>
+			<br>
+            </tr>
+			<tr>
+				<td style="font-size: large;" align="center" ><strong>Muhammad Ridwan</strong><br>
+				<p style="font-size: small;" align="center">Front End Developer</p></td>
+				<td> 
+					<table class="tabel" style="border-left: 1px black solid; height: 170px; padding-left: 200px;">
+					<tr>
+						<td><Strong>Availability</Strong></td>
+						<td>Full Time</td>
+						
+					</tr>
+					<tr>
+						<td><strong>Age</strong></td>
+						<td>17 Years old</td>
+					</tr>
+					<tr>
+						<td><strong>Location</strong></td>
+						<td>Padang,Indonesia</td>
+					</tr>
+					<tr>
+						<td><strong>Experience</strong></td>
+						<td>2 Years</td>
+					</tr>
+					<tr>
+						<td><strong>Email</strong></td>
+						<td>muhhridwan94@gmail.com</td>
+					</tr>	
+				</table>
+			</td>
+			</tr>
+			<tr>
+				<td><button class="kontak" style="background-color: blue; width: 90px;">Kontak</button> <button style="background-color: white; width: 90px;">Resume</button></td>
+			</tr>
+			
+		</table>
+	</div>
+	<div class="rangka2" style="border: 2px; border-color: black;">
+		<table>
+		<form action="">
+			<tr>
+				<td><label for="name">Name</label></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="name" name="name" placeholder="Your name.."></td></tr>
+			<tr>
+				<td><label for="role">Role</label></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="role" name="role" placeholder="Your role.."></td>
+			</tr>
+			<tr>
+				<td>
+				<label for="country">Availibility</label>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="avail" name="availibility" placeholder="Your work hours.."></td>
+			</tr>
+			<tr>
+				<td><label for="Age">Age</label></td>
+			</tr>
+			<tr><td><input type="int" id="Age" name="Age" placeholder="Your age..."></td>
+			</tr>
+			<tr>
+				<td><label for="Age">Years Experience</label></td>
+			</tr>
+			<tr>
+				<td><input type="int" id="Exp" name="Exp" placeholder="Your Experience..."></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email</label></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="email" name="email" placeholder="Your email..."></td>
+			</tr>
+			<tr>
+				<td><input class="kontak" type="submit" value="Submit" style="background-color: green;" align="center"></td>
+			</tr>
+
+			
+			
+
+
+		  
+			
+		  </form>
+		</table>
+	</div>
+	<footer style="font-size: smaller;" align="center">
+		<p>Copyright ©<span> R1-CryON</span></p>
+		<p>Created by <span>Muhhamad Ridwan</span></p>
+	</footer>
+</body>
+</html>
