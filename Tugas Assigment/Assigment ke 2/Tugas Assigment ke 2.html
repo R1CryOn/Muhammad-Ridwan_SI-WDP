@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            background-color: gainsboro;
+        }
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+
+        .topnav-right {
+        float: right;
+        }
+
+        .btn{
+            width: 50px;
+            height: 30px;
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+        }
+        .btn-biru{
+            background-color: cornflowerblue;
+            width: 60px;
+        }
+
+        .btn-merah{
+            background-color: firebrick;
+        }
+
+        .btn-hijau{
+            background-color: #04AA6D;
+            height: 40px;
+            width: 100%;
+        }
+
+        .main .biodata{
+            border: 1px solid whitesmoke;
+            margin: 40px 150px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .bio{
+            border: 1px solid black;
+            width: 40%;
+            height: auto;
+            float: none;
+        }
+
+        .skill{
+            border: 1px solid black;
+            width: 50%;
+            height: auto;
+            float: none;
+        }
+
+        .judul{
+            font-weight: bold;
+        }
+
+        .inputan{
+            margin: 40px 150px;
+            padding: 20px;
+            background-color: white;
+        }
+        .inputan input{
+            width: 100%;
+            height: 30px;
+            border: 2px solid whitesmoke;
+            border-radius: 5px;
+        }
+        .inputan .input-group{
+            padding-top: 20px;
+        }
+        .inputan .input-group h4{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="topnav-right">
+            <a href="#search">Search</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="biodata">
+           <table width="100%">
+               <tr>
+                   <td width="30%">
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" alt="Javascript Logo" width="150px">
+                                </td>
+                                <td>
+                                   <h2> Muhammad Angga</h2> 
+                                   <h5>Web Developer</h5> <br>
+                                   <button class="btn btn-biru">Login</button> 
+                                   <button class="btn btn-merah" onclick="tampilForm()">Edit</button>
+                                </td>
+                            </tr>
+                        </table>
+                   </td>
+                   <td width="20px">
+                        <div style="text-align:center;border-left: 2px solid grey;height: 100px;"></div>
+                   </td>
+                   <td width="*">
+                       <table>
+                           <tr>
+                               <td class="judul" width="120px"> Avaibility </td>
+                               <td width="10px"> : </td>
+                               <td> <span id="avaibility"> Full Time</span></td>
+                           </tr>
+                           <tr>
+                               <td class="judul"> Usia </td>
+                               <td> : </td>
+                               <td> <span id="age"> 21 </span> Tahun</td>
+                           </tr>
+                           <tr>
+                               <td class="judul"> Lokasi </td>
+                               <td> : </td>
+                               <td> <span id="lokasi"> Bekasi, Jawa Barat </span></td>
+                           </tr>
+                           <tr>
+                               <td class="judul"> Pengalaman </td>
+                               <td> : </td>
+                               <td> <span id="exp"> 1 </span> Tahun </td>
+                           </tr>
+                           <tr>
+                               <td class="judul"> Email </td>
+                               <td> : </td>
+                               <td> <span id="email"> emailsaya@email.com </span></td>
+                           </tr>
+                       </table>
+                   </td>
+               </tr>
+           </table>
+        </div>
+
+        <div class="inputan" id="formInput">
+            <div class="input-group">
+                <h4>Nama</h4>
+                <input type="text" name="nama" class="nama" id="namaInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Role</h4>
+                <input type="text" name="role" class="role" id="roleInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Avaibility</h4>
+                <input type="text" name="avaibility" class="avaibility" id="avaibilityInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Age</h4>
+                <input type="text" name="age" class="age" id="ageInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Lokasi</h4>
+                <input type="text" name="lokasi" class="lokasi" id="lokasiInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Your Experience</h4>
+                <input type="text" name="exp" class="exp" id="expInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Email</h4>
+                <input type="email" name="email" class="email" id="emailInput">
+            </div>
+
+            <div class="input-group">
+                <button type="submit" class="btn btn-hijau" onclick="SimpanData();sembunyiForm();"> Simpan </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let id_form = document.getElementById("formInput");
+    function SimpanData(){
+        var avaibility = document.getElementById("avaibilityInput").value
+        var age = document.getElementById("ageInput").value
+        var lokasi = document.getElementById("lokasiInput").value
+        var exp = document.getElementById("expInput").value
+        var email = document.getElementById("emailInput").value
+
+        document.getElementById("avaibility").innerHTML = avaibility
+        document.getElementById("age").innerHTML = age   
+        document.getElementById("lokasi").innerHTML = lokasi   
+        document.getElementById("exp").innerHTML = exp    
+        document.getElementById("email").innerHTML = email    
+    }
+
+    function tampilForm(){
+        id_form.style.display = ""
+    }
+
+    function sembunyiForm(){
+        id_form.style.display = "none"
+    }
+    </script>
+</body>
+</html>
