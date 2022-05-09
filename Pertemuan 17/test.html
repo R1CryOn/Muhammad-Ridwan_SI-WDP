@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Suite</title>
+        <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.18.2.css">
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <ul>
+            
+        </ul>
+
+        <div id="details">
+            
+        </div>
+    <script src="https://code.jquery.com/qunit/qunit-2.18.2.js"></script>
+    <script src="./my-script.js"></script>
+    <script>
+        QUnit.test('fetch data', assert => {
+            const done = assert.async()
+            
+            fetchPokeData().then(res => {
+                assert.ok(res.results.length > 0, 'get pokemon data is success')
+                done()
+            })
+        })
+        
+        QUnit.test('is details page', async (assert) => {
+            const done = assert.async()
+            const realFetch = fetch
+            fetch = () => Promise.resolve({
+                json: () => Promise.resolve({
+                    forms: {test: 'test'}
+                })
+            })
+            
+            const resUrl = 'https://pokeapi.co/api/v2/pokemon/1/'
+            const res = {
+                url: resUrl
+            }
+            let btn = document.createElement('button')
+            btn.innerHTML = 'details'
+            btn.style.marginLeft = '10px'
+            
+            let ul = document.querySelector('ul')
+            
+            await getDetailsBtn(btn, res, ul)
+            
+            const divDetails = document.querySelector('#details')
+            const homeBtn = divDetails.querySelector('button')
+            assert.ok(ul.innerHTML === '', 'ul is empty')
+            assert.ok(homeBtn.innerHTML === 'Go To Home Page', 'Home Page Button')
+            fetch = realFetch
+            done()
+        })
+    </script>
+    </body>
+</html>>
